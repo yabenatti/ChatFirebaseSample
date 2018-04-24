@@ -167,7 +167,6 @@
 				E4B11B8F208F9B1800160DA6 /* Frameworks */,
 				E4B11B90208F9B1800160DA6 /* Resources */,
 				46B4EE1297F994F296A7122F /* [CP] Embed Pods Frameworks */,
-				87F28CCF98F423D7D1EDBECB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,21 +250,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatFirebaseSample/Pods-ChatFirebaseSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		87F28CCF98F423D7D1EDBECB /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatFirebaseSample/Pods-ChatFirebaseSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA98BE5AA39E5B0C804702A1 /* [CP] Check Pods Manifest.lock */ = {

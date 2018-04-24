@@ -53,8 +53,8 @@ class ConversationViewController: UIViewController {
     func startOberserOfNewMessages() {
         FirebaseConversationService.sharedInstance.observeMessageAdditions { (success, message) in
             if success, let message = message {
-                self.arrayOfMessages.append(message)
-                self.tableView.insertRows(at: [IndexPath(row: self.arrayOfMessages.count - 1, section: 0)], with: .none)
+                self.arrayOfMessages.insert(message, at: 0)
+                self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .none)
             }
         }
     }
@@ -63,7 +63,7 @@ class ConversationViewController: UIViewController {
         FirebaseConversationService.sharedInstance.getAllMessages { (success, arrayOfMessages) in
             if success, let arrayOfMessages = arrayOfMessages {
                 self.arrayOfMessages.removeAll()
-                self.arrayOfMessages = arrayOfMessages
+                self.arrayOfMessages = arrayOfMessages.reversed()
                 self.tableView.reloadData()
             }
         }
