@@ -16,6 +16,11 @@
 		E4B11BA8208FA78900160DA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4B11BA7208FA78900160DA6 /* GoogleService-Info.plist */; };
 		E4B11BB0208FA97A00160DA6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B11BAF208FA97A00160DA6 /* LoginViewController.swift */; };
 		E4B11BB2208FA98600160DA6 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B11BB1208FA98600160DA6 /* Login.storyboard */; };
+		E4B11BB4208FBEA500160DA6 /* Conversation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B11BB3208FBEA500160DA6 /* Conversation.storyboard */; };
+		E4B11BB6208FBEBB00160DA6 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B11BB5208FBEBB00160DA6 /* ConversationViewController.swift */; };
+		E4B11BB8208FC04A00160DA6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B11BB7208FC04A00160DA6 /* Message.swift */; };
+		E4B11BBC208FC0B100160DA6 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B11BBA208FC0B100160DA6 /* MessageTableViewCell.swift */; };
+		E4B11BBD208FC0B100160DA6 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4B11BBB208FC0B100160DA6 /* MessageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		E4B11BA7208FA78900160DA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E4B11BAF208FA97A00160DA6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E4B11BB1208FA98600160DA6 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		E4B11BB3208FBEA500160DA6 /* Conversation.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Conversation.storyboard; sourceTree = "<group>"; };
+		E4B11BB5208FBEBB00160DA6 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		E4B11BB7208FC04A00160DA6 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E4B11BBA208FC0B100160DA6 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		E4B11BBB208FC0B100160DA6 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		F7D129544B8929FD8BF52C0A /* Pods-ChatFirebaseSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatFirebaseSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatFirebaseSample/Pods-ChatFirebaseSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +94,7 @@
 		E4B11B94208F9B1800160DA6 /* ChatFirebaseSample */ = {
 			isa = PBXGroup;
 			children = (
+				E4B11BB9208FC09900160DA6 /* TableCells */,
 				E4B11B95208F9B1800160DA6 /* AppDelegate.swift */,
 				E4B11B9C208F9B1900160DA6 /* Assets.xcassets */,
 				E4B11BAD208FA93F00160DA6 /* Firebase */,
@@ -103,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				E4B11BAF208FA97A00160DA6 /* LoginViewController.swift */,
+				E4B11BB5208FBEBB00160DA6 /* ConversationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -110,6 +122,7 @@
 		E4B11BAC208FA93800160DA6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E4B11BB7208FC04A00160DA6 /* Message.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -125,8 +138,18 @@
 			isa = PBXGroup;
 			children = (
 				E4B11BB1208FA98600160DA6 /* Login.storyboard */,
+				E4B11BB3208FBEA500160DA6 /* Conversation.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E4B11BB9208FC09900160DA6 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				E4B11BBA208FC0B100160DA6 /* MessageTableViewCell.swift */,
+				E4B11BBB208FC0B100160DA6 /* MessageTableViewCell.xib */,
+			);
+			path = TableCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +216,9 @@
 				E4B11BA0208F9B1900160DA6 /* LaunchScreen.storyboard in Resources */,
 				E4B11BA8208FA78900160DA6 /* GoogleService-Info.plist in Resources */,
 				E4B11B9D208F9B1900160DA6 /* Assets.xcassets in Resources */,
+				E4B11BB4208FBEA500160DA6 /* Conversation.storyboard in Resources */,
 				E4B11BB2208FA98600160DA6 /* Login.storyboard in Resources */,
+				E4B11BBD208FC0B100160DA6 /* MessageTableViewCell.xib in Resources */,
 				E4B11B9B208F9B1900160DA6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +290,10 @@
 			files = (
 				E4B11BB0208FA97A00160DA6 /* LoginViewController.swift in Sources */,
 				E4B11B98208F9B1900160DA6 /* ViewController.swift in Sources */,
+				E4B11BB8208FC04A00160DA6 /* Message.swift in Sources */,
+				E4B11BB6208FBEBB00160DA6 /* ConversationViewController.swift in Sources */,
 				E4B11B96208F9B1800160DA6 /* AppDelegate.swift in Sources */,
+				E4B11BBC208FC0B100160DA6 /* MessageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

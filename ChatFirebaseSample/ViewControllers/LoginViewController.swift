@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -71,6 +72,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func didTapLoginButton(_ sender: Any) {
+        self.signInUserOnFirebase()
     }
     
     @IBAction func hideKeyboard(_ sender: Any) {
@@ -102,6 +104,35 @@ class LoginViewController: UIViewController {
     func disableLoginButton() {
         self.loginButton.isEnabled = false
         self.loginButton.backgroundColor = UIColor.lightGray
+    }
+    
+    func createUserOnFirebase() {
+        guard let email = self.emailTextField.text, !email.isEmpty,
+            let password = self.passwordTextField.text, !password.isEmpty else {
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            self.goToConversation()
+        }
+    }
+    
+    func signInUserOnFirebase() {
+        guard let email = self.emailTextField.text, !email.isEmpty,
+            let password = self.passwordTextField.text, !password.isEmpty else {
+                return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            self.goToConversation()
+        }
+    }
+    
+    func goToConversation() {
+        let sb = UIStoryboard(name: "Conversation", bundle: nil)
+        if let vc = sb.instantiateViewController(withIdentifier: "ConversationViewController") as? ConversationViewController {
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
 }
 
