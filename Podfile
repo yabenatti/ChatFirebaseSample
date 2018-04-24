@@ -6,5 +6,7 @@ target 'ChatFirebaseSample' do
   use_frameworks!
 
   # Pods for ChatFirebaseSample
+  pod 'Firebase/Auth'
+  pod 'Firebase/Core'
 
 end

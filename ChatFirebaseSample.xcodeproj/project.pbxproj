@@ -13,6 +13,7 @@
 		E4B11B9B208F9B1900160DA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B11B99208F9B1900160DA6 /* Main.storyboard */; };
 		E4B11B9D208F9B1900160DA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4B11B9C208F9B1900160DA6 /* Assets.xcassets */; };
 		E4B11BA0208F9B1900160DA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B11B9E208F9B1900160DA6 /* LaunchScreen.storyboard */; };
+		E4B11BA8208FA78900160DA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4B11BA7208FA78900160DA6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E4B11B9C208F9B1900160DA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4B11B9F208F9B1900160DA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4B11BA1208F9B1900160DA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4B11BA7208FA78900160DA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F7D129544B8929FD8BF52C0A /* Pods-ChatFirebaseSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatFirebaseSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatFirebaseSample/Pods-ChatFirebaseSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 		E4B11B94208F9B1800160DA6 /* ChatFirebaseSample */ = {
 			isa = PBXGroup;
 			children = (
+				E4B11BA7208FA78900160DA6 /* GoogleService-Info.plist */,
 				E4B11B95208F9B1800160DA6 /* AppDelegate.swift */,
 				E4B11B97208F9B1900160DA6 /* ViewController.swift */,
 				E4B11B99208F9B1900160DA6 /* Main.storyboard */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B11BA0208F9B1900160DA6 /* LaunchScreen.storyboard in Resources */,
+				E4B11BA8208FA78900160DA6 /* GoogleService-Info.plist in Resources */,
 				E4B11B9D208F9B1900160DA6 /* Assets.xcassets in Resources */,
 				E4B11B9B208F9B1900160DA6 /* Main.storyboard in Resources */,
 			);
@@ -164,9 +168,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChatFirebaseSample/Pods-ChatFirebaseSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -362,7 +373,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM356C548D;
 				INFOPLIST_FILE = ChatFirebaseSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yasminbenatti.ChatFirebaseSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -378,7 +392,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM356C548D;
 				INFOPLIST_FILE = ChatFirebaseSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yasminbenatti.ChatFirebaseSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
