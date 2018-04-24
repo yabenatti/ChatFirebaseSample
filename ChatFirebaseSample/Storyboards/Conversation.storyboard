@@ -61,7 +61,7 @@
                             <constraint firstItem="JzV-bc-2Aw" firstAttribute="trailing" secondItem="3BG-TY-0GI" secondAttribute="trailing" id="AOx-FA-Cot"/>
                             <constraint firstItem="3BG-TY-0GI" firstAttribute="top" secondItem="JzV-bc-2Aw" secondAttribute="top" id="PAL-1a-bA6"/>
                             <constraint firstItem="Gm1-11-mxe" firstAttribute="top" secondItem="3BG-TY-0GI" secondAttribute="bottom" id="al5-0P-7XI"/>
-                            <constraint firstAttribute="bottom" secondItem="Gm1-11-mxe" secondAttribute="bottom" id="oie-5S-JGg"/>
+                            <constraint firstItem="JzV-bc-2Aw" firstAttribute="bottom" secondItem="Gm1-11-mxe" secondAttribute="bottom" id="oie-5S-JGg"/>
                             <constraint firstItem="JzV-bc-2Aw" firstAttribute="trailing" secondItem="Gm1-11-mxe" secondAttribute="trailing" id="seO-j3-Myz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JzV-bc-2Aw"/>
@@ -69,6 +69,7 @@
                     <navigationItem key="navigationItem" id="NkR-3w-bhh"/>
                     <connections>
                         <outlet property="tableView" destination="3BG-TY-0GI" id="f31-V6-Oml"/>
+                        <outlet property="textView" destination="uAA-3T-YZD" id="oYc-sN-Qy7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gOd-pR-qwC" userLabel="First Responder" sceneMemberID="firstResponder"/>

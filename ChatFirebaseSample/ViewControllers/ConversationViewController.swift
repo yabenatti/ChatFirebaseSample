@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ConversationViewController: UIViewController {
     
@@ -18,6 +19,8 @@ class ConversationViewController: UIViewController {
             self.tableView.register(UINib(nibName: String(describing: MessageTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MessageTableViewCell.self))
         }
     }
+    
+    @IBOutlet weak var textView: UITextView!
     
     // MARK: - Variables
     var arrayOfMessages = [Message]()
@@ -32,6 +35,7 @@ class ConversationViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        self.startOberserOfNewMessages()
         self.recoverMessages()
     }
 
@@ -41,6 +45,15 @@ class ConversationViewController: UIViewController {
     }
     
     // MARK: - Functions
+    func startOberserOfNewMessages() {
+        FirebaseConversationService.sharedInstance.observeMessageAdditions { (success, message) in
+            if success, let message = message {
+                self.arrayOfMessages.append(message)
+                self.tableView.insertRows(at: [IndexPath(row: self.arrayOfMessages.count - 1, section: 0)], with: .none)
+            }
+        }
+    }
+    
     func recoverMessages() {
         FirebaseConversationService.sharedInstance.getAllMessages { (success, arrayOfMessages) in
             if success, let arrayOfMessages = arrayOfMessages {
@@ -52,7 +65,15 @@ class ConversationViewController: UIViewController {
     }
     
     func sendMessageToFirebase() {
+        guard let messageContent = self.textView.text, !messageContent.isEmpty,
+            let userEmail = Auth.auth().currentUser?.email else {
+            return
+        }
         
+        self.textView.text = ""
+        
+        let dict = ["email" : userEmail, "text" : messageContent]
+        FirebaseConversationService.sharedInstance.sendMessage(dict)
     }
 
     /*
