@@ -17,6 +17,7 @@ class ConversationViewController: UIViewController {
             self.tableView.dataSource = self
             self.tableView.register(MessageTableViewCell.self, forCellReuseIdentifier: String(describing: MessageTableViewCell.self))
             self.tableView.register(UINib(nibName: String(describing: MessageTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MessageTableViewCell.self))
+            self.tableView.separatorStyle = .none
         }
     }
     
@@ -30,6 +31,10 @@ class ConversationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tableView.transform = CGAffineTransform(rotationAngle: (-.pi))
+        self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, tableView.bounds.size.width - 10)
+        self.tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

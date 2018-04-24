@@ -16,6 +16,7 @@ class LoginViewController: UIViewController {
         didSet {
             self.emailTextField.keyboardType = .emailAddress
             self.emailTextField.delegate = self
+            self.emailTextField.text = "min.benatti@gmail.com"
         }
     }
     @IBOutlet weak var passwordTextField: UITextField! {

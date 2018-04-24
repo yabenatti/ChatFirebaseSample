@@ -19,32 +19,46 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="53.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email@email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7e-3D-llO">
-                        <rect key="frame" x="16" y="8" width="288" height="14"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" red="0.98431372549999996" green="0.31372549020000001" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, here's a message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKy-qf-KmS">
-                        <rect key="frame" x="16" y="24" width="288" height="17"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3MS-u8-HKW">
+                        <rect key="frame" x="8" y="2" width="153.5" height="49.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email@email.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7e-3D-llO">
+                                <rect key="frame" x="0.0" y="0.0" width="153.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.98431372549999996" green="0.31372549020000001" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, here's a message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKy-qf-KmS">
+                                <rect key="frame" x="0.0" y="15.5" width="153.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.92645941840277779" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z7e-3D-llO" firstAttribute="top" secondItem="3MS-u8-HKW" secondAttribute="top" id="AI3-NG-re7"/>
+                            <constraint firstAttribute="trailing" secondItem="fKy-qf-KmS" secondAttribute="trailing" id="KHj-dQ-YLE"/>
+                            <constraint firstAttribute="bottom" secondItem="fKy-qf-KmS" secondAttribute="bottom" priority="250" id="TdA-F7-aEE"/>
+                            <constraint firstItem="fKy-qf-KmS" firstAttribute="leading" secondItem="3MS-u8-HKW" secondAttribute="leading" id="Wbk-mY-dgD"/>
+                            <constraint firstItem="z7e-3D-llO" firstAttribute="leading" secondItem="3MS-u8-HKW" secondAttribute="leading" id="m4L-vU-hBj"/>
+                            <constraint firstAttribute="trailing" secondItem="z7e-3D-llO" secondAttribute="trailing" id="rXO-LH-K2F"/>
+                            <constraint firstItem="fKy-qf-KmS" firstAttribute="top" secondItem="z7e-3D-llO" secondAttribute="bottom" constant="2" id="zm3-jV-05Q"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="z7e-3D-llO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="54i-Pq-CFo"/>
-                    <constraint firstAttribute="trailing" secondItem="fKy-qf-KmS" secondAttribute="trailing" constant="16" id="Ctp-2s-hND"/>
-                    <constraint firstAttribute="trailing" secondItem="z7e-3D-llO" secondAttribute="trailing" constant="16" id="Ke5-cl-1Ai"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fKy-qf-KmS" secondAttribute="bottom" constant="2" id="U12-Dg-YEf"/>
-                    <constraint firstAttribute="bottom" secondItem="fKy-qf-KmS" secondAttribute="bottom" priority="250" constant="2" id="cea-2J-ske"/>
-                    <constraint firstItem="z7e-3D-llO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="mY4-Al-BwX"/>
-                    <constraint firstItem="fKy-qf-KmS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="mb4-IL-0IB"/>
-                    <constraint firstItem="fKy-qf-KmS" firstAttribute="top" secondItem="z7e-3D-llO" secondAttribute="bottom" constant="2" id="v1M-rv-QbH"/>
+                    <constraint firstItem="3MS-u8-HKW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="BFD-ib-7SD"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3MS-u8-HKW" secondAttribute="trailing" priority="250" constant="8" id="KxS-1g-HaV"/>
+                    <constraint firstItem="3MS-u8-HKW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="PO4-Cn-xMX"/>
+                    <constraint firstAttribute="bottom" secondItem="3MS-u8-HKW" secondAttribute="bottom" constant="2" id="jZQ-f3-0mb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bubbleLeadingConstraint" destination="PO4-Cn-xMX" id="QvQ-sj-fUd"/>
+                <outlet property="bubbleTrailingConstraint" destination="KxS-1g-HaV" id="gQO-Wj-sL0"/>
+                <outlet property="bubbleView" destination="3MS-u8-HKW" id="iQH-oz-HKb"/>
                 <outlet property="contentLabel" destination="fKy-qf-KmS" id="rpI-Lk-iHG"/>
                 <outlet property="emailLabel" destination="z7e-3D-llO" id="cjb-Pt-Pvk"/>
             </connections>
