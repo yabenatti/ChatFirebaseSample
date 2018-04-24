@@ -17,4 +17,13 @@ class Message {
         self.content = content
         self.emailSender = emailSender
     }
+    
+    class func parseMessage(dict: [String : Any]) -> Message? {
+        guard let emailSender = dict["email"] as? String,
+            let content = dict["text"] as? String else {
+                return nil
+        }
+        
+        return Message(content: content, emailSender: emailSender)
+    }
 }

@@ -21,6 +21,7 @@
 		E4B11BB8208FC04A00160DA6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B11BB7208FC04A00160DA6 /* Message.swift */; };
 		E4B11BBC208FC0B100160DA6 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B11BBA208FC0B100160DA6 /* MessageTableViewCell.swift */; };
 		E4B11BBD208FC0B100160DA6 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4B11BBB208FC0B100160DA6 /* MessageTableViewCell.xib */; };
+		E4B11BBF208FC5AC00160DA6 /* FirebaseConversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B11BBE208FC5AC00160DA6 /* FirebaseConversation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		E4B11BB7208FC04A00160DA6 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E4B11BBA208FC0B100160DA6 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		E4B11BBB208FC0B100160DA6 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		E4B11BBE208FC5AC00160DA6 /* FirebaseConversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConversation.swift; sourceTree = "<group>"; };
 		F7D129544B8929FD8BF52C0A /* Pods-ChatFirebaseSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatFirebaseSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatFirebaseSample/Pods-ChatFirebaseSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 		E4B11BAD208FA93F00160DA6 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				E4B11BBE208FC5AC00160DA6 /* FirebaseConversation.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -235,12 +238,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChatFirebaseSample/Pods-ChatFirebaseSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +299,7 @@
 				E4B11BB6208FBEBB00160DA6 /* ConversationViewController.swift in Sources */,
 				E4B11B96208F9B1800160DA6 /* AppDelegate.swift in Sources */,
 				E4B11BBC208FC0B100160DA6 /* MessageTableViewCell.swift in Sources */,
+				E4B11BBF208FC5AC00160DA6 /* FirebaseConversation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,10 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM356C548D;
 				INFOPLIST_FILE = ChatFirebaseSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yasminbenatti.ChatFirebaseSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -460,10 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM356C548D;
 				INFOPLIST_FILE = ChatFirebaseSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yasminbenatti.ChatFirebaseSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

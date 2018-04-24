@@ -42,7 +42,13 @@ class ConversationViewController: UIViewController {
     
     // MARK: - Functions
     func recoverMessages() {
-        self.tableView.reloadData()
+        FirebaseConversationService.sharedInstance.getAllMessages { (success, arrayOfMessages) in
+            if success, let arrayOfMessages = arrayOfMessages {
+                self.arrayOfMessages.removeAll()
+                self.arrayOfMessages = arrayOfMessages
+                self.tableView.reloadData()
+            }
+        }
     }
     
     func sendMessageToFirebase() {
