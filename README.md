@@ -4,10 +4,10 @@ A very simple chat implemented in Swift, accessing a Firebase Real Time Database
 
 ## Getting Started
 
-Clone the repo to your machine
-Run '$ pod install' command (if you don't have CocoaPods running on your machine follow [this guide](https://guides.cocoapods.org/using/getting-started.html)
-Open the ChatFirebaseSample.xcworkspace file
-Choose a simulator and hit the play button on XCode or use the shortcut ⌘ + R
+* Clone the repo to your machine
+ *Run '$ pod install' command (if you don't have CocoaPods running on your machine follow [this guide](https://guides.cocoapods.org/using/getting-started.html)
+* Open the ChatFirebaseSample.xcworkspace file
+* Choose a simulator and hit the play button on XCode or use the shortcut ⌘ + R
 
 ### Prerequisites
 
