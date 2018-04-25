@@ -17,22 +17,31 @@ class LoginViewController: UIViewController {
             self.emailTextField.keyboardType = .emailAddress
             self.emailTextField.delegate = self
             self.emailTextField.text = "min.benatti@gmail.com"
+            self.emailTextField.tintColor = UIColor.darkPurpleLiberty
         }
     }
     @IBOutlet weak var passwordTextField: UITextField! {
         didSet {
             self.passwordTextField.isSecureTextEntry = true
             self.passwordTextField.delegate = self
+            self.passwordTextField.tintColor = UIColor.darkPurpleLiberty
         }
     }
     @IBOutlet weak var loginButton: UIButton! {
         didSet {
             self.loginButton.isEnabled = false
             self.loginButton.backgroundColor = UIColor.lightGray
+            self.loginButton.layer.cornerRadius = 5
+            self.loginButton.layer.masksToBounds = true
         }
     }
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var signInLabel: UILabel! {
+        didSet {
+            self.signInLabel.textColor = UIColor.darkPurpleLiberty
+        }
+    }
     
     // MARK: - VC Methods
     override func viewDidLoad() {
@@ -99,7 +108,7 @@ class LoginViewController: UIViewController {
     
     func enableLoginButton() {
         self.loginButton.isEnabled = true
-        self.loginButton.backgroundColor = UIColor.blue
+        self.loginButton.backgroundColor = UIColor.lightSalmonPink
     }
     
     func disableLoginButton() {

@@ -21,7 +21,17 @@ class ConversationViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textView: UITextView! {
+        didSet {
+            self.textView.layer.cornerRadius = 5
+            self.textView.layer.masksToBounds = true
+        }
+    }
+    @IBOutlet weak var sendButton: UIButton! {
+        didSet {
+            self.sendButton.tintColor = UIColor.darkPurpleLiberty
+        }
+    }
     
     // MARK: - Variables
     var arrayOfMessages = [Message]()
@@ -34,6 +44,8 @@ class ConversationViewController: UIViewController {
         self.tableView.transform = CGAffineTransform(rotationAngle: (-.pi))
         self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, tableView.bounds.size.width - 10)
         self.tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
+        
+        self.title = "Chat"
 
     }
     

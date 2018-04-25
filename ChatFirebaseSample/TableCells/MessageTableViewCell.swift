@@ -38,11 +38,13 @@ class MessageTableViewCell: UITableViewCell {
         
         
         if let userEmail = Auth.auth().currentUser?.email, userEmail == message.emailSender {
-            self.emailLabel.textAlignment = .left
-            self.contentLabel.textAlignment = .left
-        } else {
             self.emailLabel.textAlignment = .right
             self.contentLabel.textAlignment = .right
+            self.emailLabel.textColor = UIColor.lightSalmonPink
+        } else {
+            self.emailLabel.textAlignment = .left
+            self.contentLabel.textAlignment = .left
+            self.emailLabel.textColor = UIColor.darkPurpleLiberty
         }
     }
     

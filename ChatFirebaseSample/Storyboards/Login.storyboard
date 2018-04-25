@@ -108,6 +108,7 @@
                         <outlet property="loginButton" destination="i82-rt-9UF" id="cWO-cG-AxX"/>
                         <outlet property="passwordTextField" destination="NCN-Sf-aaO" id="0gG-yc-Svi"/>
                         <outlet property="scrollView" destination="nuh-AG-FxY" id="pzo-oe-huI"/>
+                        <outlet property="signInLabel" destination="Q79-Qx-s4E" id="pNl-MK-grY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Geh-k1-bes" userLabel="First Responder" sceneMemberID="firstResponder"/>

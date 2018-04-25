@@ -68,6 +68,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="NkR-3w-bhh"/>
                     <connections>
+                        <outlet property="sendButton" destination="pIO-it-Mw8" id="7C1-cT-mUe"/>
                         <outlet property="tableView" destination="3BG-TY-0GI" id="f31-V6-Oml"/>
                         <outlet property="textView" destination="uAA-3T-YZD" id="oYc-sN-Qy7"/>
                     </connections>

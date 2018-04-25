@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B17B271B095124F1F80741B4 /* Pods_ChatFirebaseSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C078BCF2E5AE6ABAB356400A /* Pods_ChatFirebaseSample.framework */; };
+		E47D2FBF2090A9E100A9FD79 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47D2FBE2090A9E100A9FD79 /* UIColorExtension.swift */; };
 		E4B11B96208F9B1800160DA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B11B95208F9B1800160DA6 /* AppDelegate.swift */; };
 		E4B11B98208F9B1900160DA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B11B97208F9B1900160DA6 /* ViewController.swift */; };
 		E4B11B9B208F9B1900160DA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B11B99208F9B1900160DA6 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		0DEF026BF408E03E7A48FE39 /* Pods-ChatFirebaseSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatFirebaseSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatFirebaseSample/Pods-ChatFirebaseSample.debug.xcconfig"; sourceTree = "<group>"; };
 		C078BCF2E5AE6ABAB356400A /* Pods_ChatFirebaseSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatFirebaseSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E47D2FBE2090A9E100A9FD79 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		E4B11B92208F9B1800160DA6 /* ChatFirebaseSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatFirebaseSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B11B95208F9B1800160DA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4B11B97208F9B1900160DA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E47D2FBD2090A9D300A9FD79 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E47D2FBE2090A9E100A9FD79 /* UIColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		E4B11B89208F9B1800160DA6 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 		E4B11B94208F9B1800160DA6 /* ChatFirebaseSample */ = {
 			isa = PBXGroup;
 			children = (
+				E47D2FBD2090A9D300A9FD79 /* Extension */,
 				E4B11BB9208FC09900160DA6 /* TableCells */,
 				E4B11B95208F9B1800160DA6 /* AppDelegate.swift */,
 				E4B11B9C208F9B1900160DA6 /* Assets.xcassets */,
@@ -167,6 +178,7 @@
 				E4B11B8F208F9B1800160DA6 /* Frameworks */,
 				E4B11B90208F9B1800160DA6 /* Resources */,
 				46B4EE1297F994F296A7122F /* [CP] Embed Pods Frameworks */,
+				2EE20A7EFA39625B2D1949F3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,6 +240,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2EE20A7EFA39625B2D1949F3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatFirebaseSample/Pods-ChatFirebaseSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		46B4EE1297F994F296A7122F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -280,6 +307,7 @@
 				E4B11BB0208FA97A00160DA6 /* LoginViewController.swift in Sources */,
 				E4B11B98208F9B1900160DA6 /* ViewController.swift in Sources */,
 				E4B11BB8208FC04A00160DA6 /* Message.swift in Sources */,
+				E47D2FBF2090A9E100A9FD79 /* UIColorExtension.swift in Sources */,
 				E4B11BB6208FBEBB00160DA6 /* ConversationViewController.swift in Sources */,
 				E4B11B96208F9B1800160DA6 /* AppDelegate.swift in Sources */,
 				E4B11BBC208FC0B100160DA6 /* MessageTableViewCell.swift in Sources */,
@@ -431,7 +459,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM356C548D;
 				INFOPLIST_FILE = ChatFirebaseSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yasminbenatti.ChatFirebaseSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -447,7 +478,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XM356C548D;
 				INFOPLIST_FILE = ChatFirebaseSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = yasminbenatti.ChatFirebaseSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
