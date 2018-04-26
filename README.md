@@ -21,4 +21,4 @@ You'll need the terminal to access the git repo and XCode 9.2 or later
 
 ## Support Material 
 
-* [SpeakerDeckPresentation](https://speakerdeck.com/yabenatti/ios-workshop-sevna-dev-day-2018) - Access it here
+* SpeakerDeckPresentation - [Access it here](https://speakerdeck.com/yabenatti/ios-workshop-sevna-dev-day-2018)
